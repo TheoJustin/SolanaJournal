@@ -20,6 +20,6 @@ pub struct DeleteJournalEntry<'info> {
     pub journal_entry: Account<'info, JournalEntry>,
 }
 
-pub fn delete_journal_entry(ctx: Context<UpdateJournalEntry>, message: String) -> Result<()> {
+pub fn delete_journal_entry(_ctx: Context<DeleteJournalEntry>, _title: String) -> Result<()> {
     Ok(())
 }

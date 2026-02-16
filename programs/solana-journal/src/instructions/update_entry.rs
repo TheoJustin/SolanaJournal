@@ -19,7 +19,7 @@ pub struct UpdateJournalEntry<'info> {
     pub journal_entry: Account<'info, JournalEntry>,
 }
 
-pub fn update_journal_entry(ctx: Context<UpdateJournalEntry>, title:String, message: String) -> Result<()> {
+pub fn update_journal_entry(ctx: Context<UpdateJournalEntry>, _title:String, message: String) -> Result<()> {
     let journal_entry = &mut ctx.accounts.journal_entry;
 
     journal_entry.update_entry(message);
